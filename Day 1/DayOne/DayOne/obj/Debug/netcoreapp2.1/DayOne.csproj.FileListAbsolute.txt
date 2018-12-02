@@ -1,0 +1,11 @@
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\bin\Debug\netcoreapp2.1\DayOne.deps.json
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\bin\Debug\netcoreapp2.1\DayOne.runtimeconfig.json
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\bin\Debug\netcoreapp2.1\DayOne.runtimeconfig.dev.json
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\bin\Debug\netcoreapp2.1\DayOne.dll
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\bin\Debug\netcoreapp2.1\DayOne.pdb
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\obj\Debug\netcoreapp2.1\DayOne.csprojAssemblyReference.cache
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\obj\Debug\netcoreapp2.1\DayOne.csproj.CoreCompileInputs.cache
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\obj\Debug\netcoreapp2.1\DayOne.AssemblyInfoInputs.cache
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\obj\Debug\netcoreapp2.1\DayOne.AssemblyInfo.cs
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\obj\Debug\netcoreapp2.1\DayOne.dll
+D:\Skrivbord\AdventOfCode2018\Day 1\DayOne\DayOne\obj\Debug\netcoreapp2.1\DayOne.pdb
