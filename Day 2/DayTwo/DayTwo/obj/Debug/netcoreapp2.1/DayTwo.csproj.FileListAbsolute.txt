@@ -1,0 +1,11 @@
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\bin\Debug\netcoreapp2.1\DayTwo.deps.json
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\bin\Debug\netcoreapp2.1\DayTwo.runtimeconfig.json
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\bin\Debug\netcoreapp2.1\DayTwo.runtimeconfig.dev.json
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\bin\Debug\netcoreapp2.1\DayTwo.dll
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\bin\Debug\netcoreapp2.1\DayTwo.pdb
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\obj\Debug\netcoreapp2.1\DayTwo.csprojAssemblyReference.cache
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\obj\Debug\netcoreapp2.1\DayTwo.csproj.CoreCompileInputs.cache
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\obj\Debug\netcoreapp2.1\DayTwo.AssemblyInfoInputs.cache
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\obj\Debug\netcoreapp2.1\DayTwo.AssemblyInfo.cs
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\obj\Debug\netcoreapp2.1\DayTwo.dll
+D:\Skrivbord\AdventOfCode2018\Day 2\DayTwo\DayTwo\obj\Debug\netcoreapp2.1\DayTwo.pdb
