@@ -16,50 +16,60 @@ namespace DayTwo
 
             // Part 1 
 
-            // Read file
             using (var myReader = File.OpenText(@"D:\Skrivbord\AdventOfCode2018\Day 2\Day2Input.txt"))
             {
-                // Get lines with letters
-                string[] ids = myReader.ReadToEnd().Split("\n");
+                // Get lines with IDs
+                string[] IDs = myReader.ReadToEnd().Split("\n");
 
-                
+                // Variables to hold the checksum and letters to match with
                 int twos = 0;
                 int threes = 0;
+                string alphabet = "abcdefgehijklmnopqrstuvwxyz";
 
-                string alpha = "abcdefgehijklmnopqrstuvwxyz";
-                foreach (var id in ids)
+                // Go through all the ids one by one
+                foreach (var ID in IDs)
                 {
-                    int notyettwos = 0;
-                    int notyetthrees = 0;
-                    for (int i = 0; i < alpha.Length; i++)
+                    // Variables for checking if it should be added to the checksum 
+                    int notYetTwos = 0;
+                    int notYetThrees = 0;
+
+                    // Uses the alphabet to check each letter against the values in the selected id
+                    for (int i = 0; i < alphabet.Length; i++)
                     {
-                        char letterToCheck = alpha[i];
+                        // Selects a letter from the alphabet to check and initialize a counter for the occurences
+                        char letterToCheck = alphabet[i];
                         int counter = 0;
-                        for (int j = 0; j < id.Length; j++)
+
+                        // Check how many times letter from alphabet matches in the selected id 
+                        for (int j = 0; j < ID.Length; j++)
                         {
-                            if (letterToCheck == id[j])
+                            if (letterToCheck == ID[j])
                             {
                                 counter += 1;
                             }
                         }
+
+                        // When the check is done it checks if the letter from the alphabet matched exactly 2 or 3 times. Only then it should increment.
                         if(counter == 2)
                         {
-                            notyettwos += 1;
+                            notYetTwos += 1;
                         }
                         else if(counter == 3)
                         {
-                            notyetthrees += 1;
+                            notYetThrees += 1;
                         }
                         else
                         {
                             // nada
                         }
                     }
-                    if (notyettwos >= 1)
+
+                    // If there were more than 1 occurrence of twos or threes it should always count as one.
+                    if (notYetTwos >= 1)
                     {
                         twos += 1;
                     }
-                    if (notyetthrees >= 1)
+                    if (notYetThrees >= 1)
                     {
                         threes += 1;
                     }
@@ -69,48 +79,52 @@ namespace DayTwo
             }
 
             // Part 2
+
             using (var myReader = File.OpenText(@"D:\Skrivbord\AdventOfCode2018\Day 2\Day2Input.txt"))
             {
-                List<string> ids = new List<string>();
+                // Get lines with IDs
+                string[] IDs = myReader.ReadToEnd().Split("\r\n");
 
-                
-                string[] test = myReader.ReadToEnd().Split("\r\n");
+                // Variable to keep track of most matches and the letters matched
+                int mostLettersMatches = 0;
+                string mostLettersMatchedID = "";
 
-                for(int j = 0;j < test.Length; j++)
+                // First loop to check with
+                foreach (var originalID in IDs)
                 {
-                    
-                    for (int i = 0; i < test[j].Length; i++)
+                    // Second loop to get the id to check against
+                    foreach (var checkID in IDs)
                     {
-                        string first = test[j];
-                        
-                        foreach (var item in test)
+                        // To skip the one that is exactly the same
+                        if (originalID == checkID)
                         {
-                            if (first == item)
+                            break;
+                        }
+
+                        // Variables to keep track of number of matches and the a string with the matches
+                        int numberOfLetterMatches = 0;
+                        string letterMatchID = "";
+
+                        // Check letter by letter and count the matches
+                        for (int d = 0; d < originalID.Length; d++)
+                        {
+                            if (originalID[d] == checkID[d])
                             {
-                                break;
+                                numberOfLetterMatches++;
+                                letterMatchID += originalID[d];
                             }
-                            int count = 0;
-                            string matches = "";
-                            for (int d = 0; d < first.Length; d++)
-                            {
-                                if (first[d] == item[d])
-                                {
-                                    count++;
-                                    matches += first[d];
-                                    if (count == 25)
-                                    {
-                                        Console.WriteLine(first + "\n" + item);
-                                        Console.WriteLine(matches);
-                                    }
-                                }
-                            }
+                        }
+
+                        // If it was more matches save how many and the letters that were matched
+                        if (mostLettersMatches < numberOfLetterMatches)
+                        {
+                            mostLettersMatches = numberOfLetterMatches;
+                            mostLettersMatchedID = letterMatchID;
                         }
                     }
                 }
 
-                // pbykrmjmizwhxlqnwasfgtycdv
-                //Console.WriteLine(correctAnswer);
-                //Console.WriteLine(firstValue);
+                Console.WriteLine(mostLettersMatches.ToString() + "\n" + mostLettersMatchedID);
             }
         }
     }
