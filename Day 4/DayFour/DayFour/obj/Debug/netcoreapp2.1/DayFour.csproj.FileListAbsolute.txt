@@ -1,0 +1,22 @@
+C:\Users\david\source\repos\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.deps.json
+C:\Users\david\source\repos\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.runtimeconfig.json
+C:\Users\david\source\repos\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.runtimeconfig.dev.json
+C:\Users\david\source\repos\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.dll
+C:\Users\david\source\repos\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.pdb
+C:\Users\david\source\repos\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.csprojAssemblyReference.cache
+C:\Users\david\source\repos\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.csproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.AssemblyInfoInputs.cache
+C:\Users\david\source\repos\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.AssemblyInfo.cs
+C:\Users\david\source\repos\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.dll
+C:\Users\david\source\repos\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.pdb
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.deps.json
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.runtimeconfig.json
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.runtimeconfig.dev.json
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.dll
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\bin\Debug\netcoreapp2.1\DayFour.pdb
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.csprojAssemblyReference.cache
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.AssemblyInfoInputs.cache
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.AssemblyInfo.cs
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.dll
+C:\Users\david\Desktop\AdventOfCode2018\Day 4\DayFour\DayFour\obj\Debug\netcoreapp2.1\DayFour.pdb
