@@ -16,7 +16,7 @@ namespace DaySix
             string[] coordinates = File.ReadAllLines(@"D:\Skrivbord\AdventOfCode2018\Day 6\Test.txt");
 
             List<Location> locations = new List<Location>();
-            int number = 0;
+            int number = 1;
 
             foreach (var cor in coordinates)
             {
@@ -50,20 +50,54 @@ namespace DaySix
 
             int thisValue = 0;
             int smallestValue = 0;
+            bool firstValue = true;
+            bool equallyClose = false;
 
             foreach (var location in locations)
             {
-                thisValue = (Math.Abs(x - location.X)) + Math.Abs(y - location.Y);
+                thisValue = (Math.Abs(x - location.Y)) + Math.Abs(y - location.X);
 
-                if (thisValue < smallestValue || smallestValue == 0)
+                if (firstValue)
                 {
                     smallestValue = thisValue;
+                    firstValue = false;
                     closestLocation = location;
                 }
+                else
+                {
+                    if (thisValue < smallestValue)
+                    {
+                        smallestValue = thisValue;
+                        equallyClose = false;
+                        closestLocation = location;
+                    }
+                    else if(thisValue == smallestValue)
+                    { 
+                        equallyClose = true;
+                    }
+                    else
+                    {
+                        // Do nothing
+                    }
+                }
+
                 // TODO - Not numbers -> Needs charcters 
             }
 
-            Console.Write(closestLocation.NameNumber);
+            if (equallyClose)
+            {
+                Console.Write(".");
+            }
+            else if(smallestValue == 0)
+            {
+                char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F' };
+                Console.Write(letters[Convert.ToInt32(closestLocation.NameNumber) - 1]);
+            }
+            else
+            {
+                char[] letters = { 'a', 'b', 'c', 'd', 'e', 'f' };
+                Console.Write(letters[Convert.ToInt32(closestLocation.NameNumber) - 1]);
+            }
 
             return closestLocation;
         }
