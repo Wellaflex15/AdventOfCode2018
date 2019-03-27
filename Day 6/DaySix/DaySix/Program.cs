@@ -10,10 +10,12 @@ namespace DaySix
     {
         static void Main(string[] args)
         {
+            // TODO - Comment and fix everything -> REFACTOR
+
             // Find the largest area that isn't infinite
             // Start at coordinates 0,0 and it can be negative
             // Every coordinate will have a list of positions that are the closest
-            // string[] coordinates = File.ReadAllLines(@"D:\Skrivbord\AdventOfCode2018\Day 6\Day6Input.txt");
+            //string[] coordinates = File.ReadAllLines(@"D:\Skrivbord\AdventOfCode2018\Day 6\Test.txt");
             string[] coordinates = File.ReadAllLines(@"D:\Skrivbord\AdventOfCode2018\Day 6\Day6Input.txt");
 
             List<Location> locations = new List<Location>();
@@ -34,8 +36,6 @@ namespace DaySix
                 number++;
             }
 
-            // TODO - change to 500 för i and j i the for loop AND remove the printing for the area. 
-
             int sizeOfArea = 500;
 
             //00 01 02 03 04 05 06 07 08 09
@@ -49,24 +49,25 @@ namespace DaySix
             //80                         89
             //90 91 92 93 94 95 96 97 98 99
 
-            for (int i = 0; i < sizeOfArea; i++)
+            for (int y = 0; y < sizeOfArea; y++)
             {
-                for (int j = 0; j < sizeOfArea; j++)
+                for (int x = 0; x < sizeOfArea; x++)
                 {
-                    var location = WhichIsClosest(i, j, locations);
+                    var location = WhichIsClosest(x, y, locations);
 
-                    if (i == 0)
-                    {
-                        ChangeInfinteAreaToTrue(location, locations);
-                    }else if(i > 0 && j == 0)
+                    if (y == 0)
                     {
                         ChangeInfinteAreaToTrue(location, locations);
                     }
-                    else if(i == (sizeOfArea - 1))
+                    else if(y > 0 && x == 0)
                     {
                         ChangeInfinteAreaToTrue(location, locations);
                     }
-                    else if(j == (sizeOfArea - 1))
+                    else if(y == (sizeOfArea - 1))
+                    {
+                        ChangeInfinteAreaToTrue(location, locations);
+                    }
+                    else if(x == (sizeOfArea - 1))
                     {
                         ChangeInfinteAreaToTrue(location, locations);
                     }
@@ -83,7 +84,22 @@ namespace DaySix
                 }
             }
 
-            Console.WriteLine();
+            /* Part 2 */
+
+            int totalArea = 0;
+            int lessThan = 10000;
+
+            for (int y = 0; y < sizeOfArea; y++)
+            {
+                for (int x = 0; x < sizeOfArea; x++)
+                {
+                    totalArea = totalArea + lessThanInputDistance(x, y, lessThan, locations);
+                }
+            }
+
+            Console.WriteLine($"Coordinates wiht less distance than {lessThan} make up an area of {totalArea}");
+            
+
         }
 
         public static void ChangeInfinteAreaToTrue(Location loc, List<Location> locations)
@@ -103,7 +119,7 @@ namespace DaySix
 
             foreach (var location in locations)
             {
-                thisValue = (Math.Abs(x - location.Y)) + Math.Abs(y - location.X);
+                thisValue = (Math.Abs(x - location.X)) + Math.Abs(y - location.Y);
 
                 if (firstValue)
                 {
@@ -155,6 +171,41 @@ namespace DaySix
         {
             var location = locations.Where(x => x.NameNumber == loc.NameNumber).First();
             location.Area++;
+        }
+
+        public static int lessThanInputDistance(int x, int y, int lessThan, List<Location> locations)
+        {
+            int totalDistance = 0;
+            //Less than 32
+            //Distance to coordinate A: abs(4-1) + abs(3-1) =  5
+            //Distance to coordinate B: abs(4 - 1) + abs(3 - 6) = 6
+            //Distance to coordinate C: abs(4 - 8) + abs(3 - 3) = 4
+            //Distance to coordinate D: abs(4 - 3) + abs(3 - 4) = 2
+            //Distance to coordinate E: abs(4 - 5) + abs(3 - 5) = 3
+            //Distance to coordinate F: abs(4 - 8) + abs(3 - 9) = 10
+            //Total distance: 5 + 6 + 4 + 2 + 3 + 10 = 30
+
+            // int x = 4, int y = 3
+            // lessThan = 32
+            // List with all locations
+
+            int thisValue = 0;
+
+            foreach (Location location in locations)
+            {
+                thisValue = thisValue + (Math.Abs(x - location.X) + (Math.Abs(y - location.Y)));
+            }
+
+            if (thisValue < lessThan)
+            {
+                totalDistance = 1;
+            }
+            else
+            {
+                totalDistance = 0;
+            }
+
+            return totalDistance;
         }
     }
 
